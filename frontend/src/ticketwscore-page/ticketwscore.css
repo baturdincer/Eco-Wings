@@ -1,0 +1,122 @@
+/* ticketwscore.css */
+.ticket-score-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .score-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .score-header h1 {
+    font-size: 2.8rem;
+    color: #2d0a57;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #6a1b9a, #8a2be2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .total-score-box {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 0 auto 2rem;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .total-score {
+    font-size: 2.5rem;
+    color: #8a2be2;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .total-score-label {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .history-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .history-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .history-item {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(248, 240, 255, 0.3);
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    position: relative;
+  }
+  
+  .flight-score {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(138, 43, 226, 0.1);
+    color: #8a2be2;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .flight-info {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .airline-logo {
+    font-size: 2rem;
+    color: #8a2be2;
+  }
+  
+  .flight-details h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .flight-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .score-header h1 {
+      font-size: 2rem;
+    }
+    
+    .flight-info {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .flight-score {
+      position: static;
+      margin-top: 1rem;
+    }
+  }

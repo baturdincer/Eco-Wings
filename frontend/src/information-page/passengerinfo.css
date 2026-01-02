@@ -1,0 +1,228 @@
+.passenger-info {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(138, 43, 226, 0.1);
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.passenger-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #8a2be2, #6a1b9a);
+}
+
+.passenger-info h1 {
+  font-size: 2.5rem;
+  color: #6a1b9a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+
+.passenger-info h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #8a2be2, #6a1b9a);
+  border-radius: 2px;
+}
+
+.passenger-info h2 {
+  font-size: 1.8rem;
+  margin: 3rem 0 1.5rem;
+  color: #6a1b9a;
+  position: relative;
+  padding-left: 1.5rem;
+  font-weight: 600;
+}
+
+.passenger-info h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(to bottom, #8a2be2, #6a1b9a);
+  border-radius: 3px;
+}
+
+.passenger-info p {
+  margin: 1rem 0;
+  line-height: 1.8;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.passenger-info ul {
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.passenger-info li {
+  margin-bottom: 0.8rem;
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.passenger-info li::before {
+  content: '✈️';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.passenger-info strong {
+  color: #6a1b9a;
+  font-weight: 600;
+}
+
+.passenger-info .note {
+  margin: 3rem 0 1rem;
+  padding: 1.5rem;
+  background-color: #f9f5ff;
+  border-left: 5px solid #8a2be2;
+  font-weight: 500;
+  color: #6a1b9a;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.1);
+}
+
+.passenger-info .note::before {
+  content: 'ℹ️';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  opacity: 0.1;
+}
+
+/* Service Cards */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(138, 43, 226, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(106, 27, 154, 0.1);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #8a2be2, #6a1b9a);
+}
+
+.service-card h3 {
+  color: #6a1b9a;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+/* Wheelchair Levels */
+.wheelchair-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.wheelchair-level {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(138, 43, 226, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid #8a2be2;
+}
+
+.wheelchair-level h4 {
+  color: #6a1b9a;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .passenger-info {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .passenger-info h1 {
+    font-size: 2rem;
+  }
+  
+  .passenger-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .wheelchair-level {
+    min-width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.1s; }
+section:nth-child(3) { animation-delay: 0.2s; }
+section:nth-child(4) { animation-delay: 0.3s; }
+section:nth-child(5) { animation-delay: 0.4s; }
+section:nth-child(6) { animation-delay: 0.5s; }

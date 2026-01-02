@@ -1,0 +1,67 @@
+.edit-profile-container {
+  background: linear-gradient(145deg, #f8f4ff, #ffffff);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(106, 27, 154, 0.15);
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', system-ui;
+  border: 1px solid #f0ebfa;
+}
+
+.edit-profile-container p {
+  font-size: 1.1rem;
+  color: #4a4458;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: rgba(245, 240, 255, 0.5);
+  border-radius: 12px;
+}
+
+.edit-button, .save-button {
+  background: linear-gradient(135deg, #7c4dff, #6a1b9a);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(106, 27, 154, 0.1);
+}
+
+.edit-button:hover, .save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(106, 27, 154, 0.2);
+  background: linear-gradient(135deg, #6a1b9a, #7c4dff);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e8e0f5;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background: #fcfaff;
+}
+
+.edit-form input:focus {
+  outline: none;
+  border-color: #9c27b0;
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.1);
+}
+
+.edit-profile-container strong {
+  color: #6a1b9a;
+  margin-right: 8px;
+}

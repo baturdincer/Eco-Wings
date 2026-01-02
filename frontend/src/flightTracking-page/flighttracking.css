@@ -1,0 +1,176 @@
+.flight-tracking-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(145deg, #f8f4ff 0%, #ffffff 100%);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .profile-header h1 {
+    font-size: 2.8rem;
+    color: #2d0a57;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #6a1b9a, #8a2be2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .profile-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .tracking-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .status-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .status-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    transform: rotate(45deg);
+    width: 120px;
+    text-align: center;
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .status-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.3rem 0;
+    display: block;
+  }
+  
+  .status-text.confirmed {
+    background: #4CAF50;
+  }
+  .status-text.pending {
+    background: #ff9800;
+  }
+  
+  .flight-card {
+    margin-top: 2rem;
+  }
+  
+  .flight-info {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  
+  .airline-logo {
+    font-size: 2.5rem;
+    color: #8a2be2;
+  }
+  
+  .flight-details h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+  }
+  
+  .flight-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .flight-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid rgba(138, 43, 226, 0.1);
+    padding-top: 1.5rem;
+  }
+  
+  .detail-item {
+    background: rgba(248, 240, 255, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .detail-item label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .detail-item span {
+    font-size: 1.1rem;
+    color: #2d0a57;
+    font-weight: 500;
+  }
+  
+  .booking-code {
+    font-family: monospace;
+    letter-spacing: 2px;
+  }
+  
+  .price-section {
+    text-align: right;
+    border-top: 1px solid rgba(138, 43, 226, 0.1);
+    padding-top: 1.5rem;
+  }
+  
+  .total-label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .total-price {
+    font-size: 2rem;
+    color: #2d0a57;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 768px) {
+    .flight-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .flight-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .status-badge {
+      top: 15px;
+      right: -40px;
+      width: 140px;
+    }
+    
+    .flight-details-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .price-section {
+      text-align: center;
+    }
+  }

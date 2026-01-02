@@ -1,0 +1,248 @@
+.baggage-info {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(138, 43, 226, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.baggage-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #8a2be2, #6a1b9a);
+}
+
+.baggage-hero {
+  padding: 3rem 3rem 0;
+  text-align: center;
+}
+
+.baggage-hero h1 {
+  font-size: 2.5rem;
+  color: #6a1b9a;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.baggage-hero h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #8a2be2, #6a1b9a);
+  border-radius: 2px;
+}
+
+.hero-image {
+  margin: 2rem 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.info-section {
+  padding: 0 3rem 2rem;
+}
+
+.info-section h2 {
+  font-size: 1.8rem;
+  color: #6a1b9a;
+  margin: 3rem 0 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-weight: 600;
+}
+
+.info-section h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(to bottom, #8a2be2, #6a1b9a);
+  border-radius: 3px;
+}
+
+.info-card, .warning-card, .weight-card, .allowance-card, .fees-card, .prohibited-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(138, 43, 226, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover, .weight-card:hover, .allowance-card:hover, .fees-card:hover, .prohibited-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(106, 27, 154, 0.1);
+}
+
+.info-card::after, .weight-card::after, .allowance-card::after, .fees-card::after, .prohibited-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #8a2be2, #6a1b9a);
+}
+
+.warning-card {
+  background: #fff9f9;
+  border-left: 4px solid #ff6b6b;
+}
+
+.warning-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6a1b9a;
+}
+
+.weight-grid, .allowance-grid, .fees-grid, .prohibited-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.weight-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.allowance-grid, .fees-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.prohibited-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.weight-item, .allowance-item, .fees-item, .prohibited-item {
+  background: rgba(138, 43, 226, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.weight-item:hover, .allowance-item:hover, .fees-item:hover, .prohibited-item:hover {
+  background: rgba(138, 43, 226, 0.1);
+}
+
+.weight-value, .allowance-amount, .fees-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6a1b9a;
+  margin-bottom: 0.5rem;
+}
+
+.weight-label, .allowance-desc, .fees-type {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.allowance-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.allowance-icon, .prohibited-icon {
+  font-size: 2rem;
+}
+
+.prohibited-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-note {
+  background: #f9f5ff;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(138, 43, 226, 0.1);
+}
+
+.note {
+  font-weight: 500;
+  color: #6a1b9a;
+  background: rgba(138, 43, 226, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .baggage-info {
+    margin: 1rem;
+    padding: 0;
+  }
+  
+  .baggage-hero {
+    padding: 2rem 1.5rem 0;
+  }
+  
+  .baggage-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .info-section {
+    padding: 0 1.5rem 1.5rem;
+  }
+  
+  .weight-grid, .prohibited-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .allowance-grid, .fees-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.1s; }
+section:nth-child(3) { animation-delay: 0.2s; }

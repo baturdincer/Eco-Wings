@@ -1,0 +1,331 @@
+.results-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f8f4ff, #ffffff);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.results-container h1 {
+  font-size: 3rem;
+  color: #2d0a57;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #6a11cb, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.filter-bar input {
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.filter-bar button {
+  background: linear-gradient(45deg, #6a11cb, #8a2be2);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(106, 17, 203, 0.2);
+  transition: all 0.3s ease;
+}
+
+.filter-bar button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #5d0daf, #6a11cb);
+}
+
+.flight-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.flight-card {
+ background-image: url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.4s ease;
+}
+
+
+
+.flight-card:hover {
+  transform: translateY(-6px);
+}
+
+.flight-card-content {
+  width: 100%;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.253);
+  backdrop-filter: blur(4px);
+}
+
+
+.flight-card-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.6rem;
+}
+
+.flight-card-content p {
+  font-size: 0.95rem;
+  color: #eee;
+  margin: 0.3rem 0;
+}
+
+.flight-card-content button {
+  margin-top: 1rem;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.flight-card-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.2);
+}
+.sort-button {
+  margin: 0 0.5rem;
+  background: #8a2be2;
+  color: white;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sort-button:hover {
+  background: #6a1bbd;
+}
+.filter-sort-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.filter-card, .sort-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 30px rgba(138, 43, 226, 0.1);
+  border: 1px solid rgba(138, 43, 226, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.filter-card label,
+.sort-card label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #6a1b9a;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.filter-input-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-input-group input {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.filter-input-group button,
+.sort-buttons button {
+  background: linear-gradient(45deg, #6a11cb, #8a2be2);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-input-group button:hover,
+.sort-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.3);
+}
+
+.sort-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+.search-summary-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  box-shadow: 0 10px 40px rgba(106, 17, 203, 0.1);
+  text-align: center;
+  border: 1px solid rgba(138, 43, 226, 0.15);
+}
+
+.search-summary-card p {
+  font-size: 1.2rem;
+  color: #2d0a57;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group,
+.sort-group {
+  margin-bottom: 1.2rem;
+}
+
+.filter-row,
+.sort-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-row input {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-width: 140px;
+}
+
+.filter-row button,
+.sort-buttons button {
+  background: linear-gradient(45deg, #6a11cb, #8a2be2);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-row button:hover,
+.sort-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.2);
+}
+
+.search-summary-card label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #6a1b9a;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.search-summary-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  box-shadow: 0 10px 40px rgba(106, 17, 203, 0.1);
+  text-align: center;
+  border: 1px solid rgba(138, 43, 226, 0.15);
+}
+
+.search-summary-card p {
+  font-size: 1.2rem;
+  color: #2d0a57;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group,
+.sort-group {
+  margin-bottom: 1.2rem;
+}
+
+.filter-row,
+.sort-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-row input {
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-width: 140px;
+}
+
+.filter-row button,
+.sort-buttons button {
+  background: linear-gradient(45deg, #6a11cb, #8a2be2);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-row button:hover,
+.sort-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.2);
+}
+
+.search-summary-card label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #6a1b9a;
+  font-weight: 600;
+  font-size: 1rem;
+}

@@ -1,0 +1,46 @@
+.hediye-sayfasi-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.coupons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.coupon-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(106,17,203,0.1);
+}
+
+.coupon-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.coupon-card button {
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.coupon-card button:hover {
+  background-color: #5d0daf;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
